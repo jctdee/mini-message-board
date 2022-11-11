@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <button class="new-message-link"><a href="/new">New Message</a></button>
+    <main>
+      <% for(msg of messages) { %>
+      <div class="message-item">
+        <div class="message-author"><%= msg.user %></div>
+        <div class="message-date"><%= msg.added %>></div>
+        <div class="message-content"><%= msg.text %></div>
+      </div>
+      <% } %>
+    </main>
+  </body>
+</html>
